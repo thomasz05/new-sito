@@ -50,16 +50,16 @@ $.getJSON(url, function (response) {
     }
 response.players.sample.forEach(player)
 
-        function player(item, index) {
-            console.log(index)
-            var row = table.insertRow(1);
-            var cell0 = row.insertCell(0);
-            var cell1 = row.insertCell(1);
-            var cell2 = row.insertCell(2);
-            cell0.innerHTML = `<img src='https://crafatar.com/avatars/${item.id}?size=20&default=MHF_Steve'>`;
-            cell1.innerHTML = item.name;
-            cell2.innerHTML = item.id;
-        }
+function player(item, index) {
+    console.log(index)
+    var row = table.insertRow(1);
+    var cell0 = row.insertCell(0);
+    var cell1 = row.insertCell(1);
+    var cell2 = row.insertCell(2);
+    cell0.innerHTML = `<img src='https://crafatar.com/avatars/${item.id}?size=20&default=MHF_Steve'>`;
+    cell1.innerHTML = item.name;
+    cell2.innerHTML = item.id;
+}
     })
 })
     
