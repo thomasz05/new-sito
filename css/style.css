@@ -674,3 +674,7 @@ button {
 
 /** end footer **/
 
+.center {
+     margin-left: auto;
+     margin-right: auto;
+   }

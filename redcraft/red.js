@@ -18,6 +18,7 @@ function pingServer() {
     $.getJSON(url, function (response) {
         if (response.error) {
             setTimeout(pingServer, 1e3);
+            players.text("Server offline");
             return false
         }
         players.text("Giocatori: " + response.players.online + " / " + response.players.max);
@@ -29,7 +30,13 @@ function pingServer() {
 var table = document.getElementById("player");
 $.getJSON(url, function (response) {
     if (response.error) {
-        setTimeout(pingServer, 1e3);
+        var row = table.insertRow(1);
+        var cell0 = row.insertCell(0);
+        var cell1 = row.insertCell(1);
+        var cell2 = row.insertCell(2);
+        cell0.innerHTML = `<img src='https://minotar.net/helm/HeroBrine/20'>`;
+        cell1.innerHTML = "NONE";
+        cell2.innerHTML = "NONE";
         return false
     }
     console.log("test")
