@@ -31,7 +31,7 @@ function pingServer() {
         // motd.html(parseStyle(response.description));
         players.text("Giocatori: " + response.players.online + " / " + response.players.max);
         setTimeout(pingServer, 1e3)
-
+    })
 }
 
 var table = document.getElementById("player");
@@ -48,6 +48,7 @@ $.getJSON(url, function (response) {
         setTimeout(pingServer, 1e3);
         return false
     }
+})
 response.players.sample.forEach(player)
 
 function player(item, index) {
@@ -60,6 +61,4 @@ function player(item, index) {
     cell1.innerHTML = item.name;
     cell2.innerHTML = item.id;
 }
-    })
-})
-    
+
