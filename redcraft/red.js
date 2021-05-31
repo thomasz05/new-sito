@@ -1,3 +1,11 @@
+var table = document.getElementById("player");
+const url = "https://api.minetools.eu/ping/play.redcraft.it";
+const serverStatus = $("#serverStatus");
+const serverStatusPe = $("#serverStatusPe");
+const motdContainer = $("#motdContainer");
+const motd = $("#motd");
+const players = $("#onlinePlayers");
+
 $(window).on("load", function () {
     const ip = $(".address");
     let max = 0;
@@ -34,13 +42,6 @@ function pingServer() {
     })
 }
 
-var table = document.getElementById("player");
-const url = "https://api.minetools.eu/ping/play.redcraft.it";
-const serverStatus = $("#serverStatus");
-const serverStatusPe = $("#serverStatusPe");
-const motdContainer = $("#motdContainer");
-const motd = $("#motd");
-const players = $("#onlinePlayers");
 $.getJSON(url, function (response) {
     if (response.error) {
         serverStatus.css("color", "var(--red)");
@@ -48,9 +49,8 @@ $.getJSON(url, function (response) {
         setTimeout(pingServer, 1e3);
         return false
     }
-})
     response.players.sample.forEach(player)
-
+})
 function player(item, index) {
     console.log(index)
     var row = table.insertRow(1);
@@ -61,4 +61,3 @@ function player(item, index) {
     cell1.innerHTML = item.name;
     cell2.innerHTML = item.id;
 }
-
