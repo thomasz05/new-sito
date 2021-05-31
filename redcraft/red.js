@@ -49,7 +49,7 @@ $.getJSON(url, function (response) {
         return false
     }
 })
-response.players.sample.forEach(player)
+    response.players.sample.forEach(player)
 
 function player(item, index) {
     console.log(index)
