@@ -31,19 +31,7 @@ function pingServer() {
         // motd.html(parseStyle(response.description));
         players.text("Giocatori: " + response.players.online + " / " + response.players.max);
         setTimeout(pingServer, 1e3)
-        response.players.sample.forEach(player)
 
-        function player(item, index) {
-            console.log(index)
-            var row = table.insertRow(1);
-            var cell0 = row.insertCell(0);
-            var cell1 = row.insertCell(1);
-            var cell2 = row.insertCell(2);
-            cell0.innerHTML = `<img src='https://crafatar.com/avatars/${item.id}?size=20&default=MHF_Steve'>`;
-            cell1.innerHTML = item.name;
-            cell2.innerHTML = item.id;
-        }
-    })
 }
 
 var table = document.getElementById("player");
@@ -60,5 +48,18 @@ $.getJSON(url, function (response) {
         setTimeout(pingServer, 1e3);
         return false
     }
+response.players.sample.forEach(player)
 
+        function player(item, index) {
+            console.log(index)
+            var row = table.insertRow(1);
+            var cell0 = row.insertCell(0);
+            var cell1 = row.insertCell(1);
+            var cell2 = row.insertCell(2);
+            cell0.innerHTML = `<img src='https://crafatar.com/avatars/${item.id}?size=20&default=MHF_Steve'>`;
+            cell1.innerHTML = item.name;
+            cell2.innerHTML = item.id;
+        }
+    })
 })
+    
