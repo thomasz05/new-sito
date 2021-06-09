@@ -1,57 +1,40 @@
 const url = "https://api.minetools.eu/ping/play.redcraft.it";
 const players = $("#onlinePlayers");
-$(window).on("load", function () {
-    const ip = $(".address");
-    let max = 0;
-    ip.each(function () {
-        max = Math.max($(this).width(), max)
-    });
-    ip.each(function () {
-        $(this).width(max)
-    });
+const playerList = $("#player");
 
-    pingServer()
-});
-function pingServer() {
-    const url = "https://api.minetools.eu/ping/play.redcraft.it";
-    const list = $("#list");
+$(window).on("load", pingServer);
+
+function pingServer () {
     $.getJSON(url, function (response) {
-        if (response.error) {
-            setTimeout(pingServer, 1e3);
-            players.text("Server offline");
-            return false
-        }
-        players.text("Giocatori: " + response.players.online + " / " + response.players.max);
-        setTimeout(pingServer, 1e3)
+        setTimeout(pingServer, 1e3);
 
+        // ERROR
+        if (response.error) {
+            // PLAYER COUNT
+            players.text("Server offline");
+
+            // EMPTY TABLE
+            playerList.html('');
+            $('<tr>').append(
+                $('<td>').html(`<img src='https://minotar.net/helm/HeroBrine/20'>`),
+                $('<td>'),
+                $('<td>')
+            ).appendTo(playerList);
+
+            return
+        }
+
+        // PLAYER COUNT
+        players.text("Giocatori: " + response.players.online + " / " + response.players.max);
+        
+        // CREATE TABLE
+        playerList.html('');
+        response.players.sample.forEach((p,i) => {
+            $('<tr>').append(
+                $('<td>').html(`<img src='https://crafatar.com/avatars/${p.id}?size=20&default=MHF_Steve'>`),
+                $('<td>').text(p.name),
+                $('<td>').text(p.id)
+            ).appendTo(playerList);
+        });
     })
 }
-
-var table = document.getElementById("player");
-$.getJSON(url, function (response) {
-    if (response.error) {
-        var row = table.insertRow(1);
-        var cell0 = row.insertCell(0);
-        var cell1 = row.insertCell(1);
-        var cell2 = row.insertCell(2);
-        cell0.innerHTML = `<img src='https://minotar.net/helm/HeroBrine/20'>`;
-        cell1.innerHTML = "NONE";
-        cell2.innerHTML = "NONE";
-        return false
-    }
-    console.log("test")
-    response.players.sample.forEach(player)
-
-    function player(item, index) {
-        console.log(index)
-        var row = table.insertRow(1);
-        var cell0 = row.insertCell(0);
-        var cell1 = row.insertCell(1);
-        var cell2 = row.insertCell(2);
-        cell0.innerHTML = `<img src='https://crafatar.com/avatars/${item.id}?size=20&default=MHF_Steve'>`;
-        cell1.innerHTML = item.name;
-        cell2.innerHTML = item.id;
-    }
-})
-
-
