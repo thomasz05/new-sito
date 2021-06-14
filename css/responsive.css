@@ -5,7 +5,11 @@
 
 /*------------------------------------------------------------------- 991px x 768px ---------------------------------------------------------------------*/
 
-@media (min-width: 1200px) and (max-width: 1500px) {}
+@media (min-width: 1200px) and (max-width: 1500px) {
+    .fixed-bottom{
+        position: relative;
+    }
+}
 
 @media (min-width: 992px) and (max-width: 1199px) {}
 
