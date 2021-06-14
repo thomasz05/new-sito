@@ -25,7 +25,7 @@ function pingServer () {
         }
 
         // PLAYER COUNT
-        players.text("Giocatori: " + response.players.online + " / " + response.players.max);
+        players.text("Giocatori Online: " + response.players.online + " / " + response.players.max);
         
         // CREATE TABLE
         playerList.html('');
