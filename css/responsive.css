@@ -62,6 +62,7 @@
     .main_form {
         margin-bottom: -92%;
     }
+
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
@@ -195,4 +196,8 @@
         float: right;
     }
 }
-
+@media (max-width: 300px) {
+    .logo a {
+        color:#0c0f38
+   }
+}
