@@ -17,8 +17,8 @@ function pingServer () {
             playerList.html('');
             $('<tr>').append(
                 $('<td>').html(`<img src='https://minotar.net/helm/HeroBrine/20'>`),
-                $('<td>'),
-                $('<td>')
+                $('<td>').text('NONE'),
+                $('<td>').text('NONE')
             ).appendTo(playerList);
 
             return
