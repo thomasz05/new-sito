@@ -34,7 +34,7 @@ function pingServer () {
                 $('<td>').html(`<img src='https://minotar.net/helm/HeroBrine/20'>`),
                 $('<td>').text('NONE'),
                 $('<td>').text('NONE')
-            ).appendTo(1);
+            ).appendTo(playerList);
             return
         }
         
