@@ -23,9 +23,21 @@ function pingServer () {
 
             return
         }
+        
+        
 
         // PLAYER COUNT
         players.text("Giocatori Online: " + response.players.online + " / " + response.players.max);
+        if (response.players.online==0) {
+            // EMPTY SERVER
+            $('<tr>').append(
+                $('<td>').html(`<img src='https://minotar.net/helm/HeroBrine/20'>`),
+                $('<td>').text('NONE'),
+                $('<td>').text('NONE')
+            ).appendTo(playerList);
+
+            return
+        }
         
         // CREATE TABLE
         playerList.html('');
