@@ -1,4 +1,4 @@
-const url = "https://api.minetools.eu/ping/play.redcraft.it";
+const url = "https://api.minetools.eu/ping/panel.blackdrake.tk";
 const players = $("#onlinePlayers");
 const playerList = $("#player");
 
