@@ -30,6 +30,7 @@ function pingServer () {
         players.text("Giocatori Online: " + response.players.online + " / " + response.players.max);
         if (response.players.online==0) {
             // EMPTY SERVER
+            playerList.html('');
             $('<tr>').append(
                 $('<td>').html(`<img src='https://minotar.net/helm/HeroBrine/20'>`),
                 $('<td>').text('NONE'),
