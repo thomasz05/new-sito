@@ -1,6 +1,6 @@
 const url = "https://api.minetools.eu/ping/play.redcraft.it";
 const players = $("#onlinePlayers");
-const playerList = $("#player");
+const playerList = $("#playerList");
 
 $(window).on("load", pingServer);
 
