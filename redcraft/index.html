@@ -17,6 +17,7 @@
    <link rel="stylesheet" href="../css/bootstrap.min.css">
    <!-- style css -->
    <link rel="stylesheet" href="../css/style.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
    <!-- Responsive-->
    <link rel="stylesheet" href="../css/responsive.css">
    <!-- fevicon -->
@@ -28,23 +29,23 @@
    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
       media="screen">
-   
-    <!-- Javascript files-->
+
+   <!-- Javascript files-->
    <script src="../js/jquery.min.js"></script>
    <script src="../js/popper.min.js"></script>
    <script src="../js/bootstrap.bundle.min.js"></script>
    <script src="../js/jquery-3.0.0.min.js"></script>
    <script src="../js/plugin.js"></script>
-   
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-B7NWLF95ZP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-B7NWLF95ZP');
-</script>
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-B7NWLF95ZP"></script>
+   <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+
+      gtag('config', 'G-B7NWLF95ZP');
+   </script>
 </head>
 <!-- body -->
 
@@ -64,7 +65,8 @@
                   <div class="full">
                      <div class="center-desk">
                         <div class="logo">
-                           <a href="index.html"><img class="logoimg" src="../images/logo.png" alt="#" />Thomas Zamengo</a>
+                           <a href="index.html"><img class="logoimg" src="../images/logo.png" alt="#" />Thomas
+                              Zamengo</a>
 
                         </div>
                      </div>
@@ -79,7 +81,7 @@
                      <div class="collapse navbar-collapse" id="navbarsExample04">
                         <ul class="navbar-nav mr-auto">
                            <li class="nav-item"></li>
-                              <a class="nav-link" href="../">Home</a>
+                           <a class="nav-link" href="../">Home</a>
                            </li>
                            <li class="nav-item">
                               <a class="nav-link" href="../arduino/"> Arduino </a>
@@ -150,24 +152,29 @@
                   <p>Il mio gioco preferito è Minecraft in cui posso esprimere la mia cretiva e il mio ingegno.
                      <br>
                      Io gioco in un server chimato Redcraft che è uno dei server semi tecnici più grandi di Italia.
-                     per ulteriori informazioni sulla Redcraft vista: <a href="http://redcraft.it/">https://redcraft.it/</a>
-                     <div class="row">
-                        <div class="col-md-12">
-                           <div class="titlepage">
-                              <h2>Redcraft</h2>
-                              <p>Questa tabella mostra tutti i giocatori attulamte online sul server della redcraft</p>
-                           </div>
+                     per ulteriori informazioni sulla Redcraft vista: <a
+                        href="http://redcraft.it/">https://redcraft.it/</a>
+                  <div class="row">
+                     <div class="col-md-12">
+                        <div class="titlepage">
+                           <h2>Redcraft</h2>
+                           <p>Questa tabella mostra tutti i giocatori attulamte online sul server della redcraft</p>
                         </div>
                      </div>
-
-                  <p id="onlinePlayers" style="text-align: center;"><b></b></p>
+                  
+                  </div>
+                  <p class="redcraftlist titlepage">
+                  
+                     <i id="onlinePlayers"><b></b></i>
+                     <i id="status" class='fa fa-signal' style='color:green' aria-hidden='true'></i>
+                     </p>
                   <table class="center">
                      <thead>
-                       <tr>
-                        <td> </td>
-                         <td>Nome</td>
-                         <td>Uuid</td>
-                       </tr>
+                        <tr>
+                           <td> </td>
+                           <td>Nome</td>
+                           <td>Uuid</td>
+                        </tr>
                      </thead>
                      <tbody id="player">
                         <tr>
@@ -201,15 +208,16 @@
    <!-- end footer -->
    <script src="./red.js" defer=""></script>
    <script></script>
-  
+
    <!-- sidebar -->
    <script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
    <script src="../js/custom.js"></script>
    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
-   
+
    <!--<script src="js/scripts.js"> </script>-->
    <!--<link rel="stylesheet" type="text/css" href="https://cdn.wpcc.io/lib/1.0.2/cookieconsent.min.css"/><script src="https://cdn.wpcc.io/lib/1.0.2/cookieconsent.min.js" defer></script><script>window.addEventListener("load", function(){window.wpcc.init({"border":"thin","corners":"large","colors":{"popup":{"background":"#f6f6f6","text":"#000000","border":"#555555"},"button":{"background":"#ff0000","text":"#ffffff"}},"position":"bottom","padding":"small","content":{"href":"thomas05.tk/cookie","message":"questo sito usa i cookies per assicurarti la migliore esperienza possibile su internet","link":" ","button":"Accetta"}})});</script>-->
-   <script src="https://cdn.websitepolicies.net/lib/cookieconsent/1.0.3/cookieconsent.min.js" defer></script><script>window.addEventListener("load",function(){window.wpcc.init({"border":"thin","corners":"small","colors":{"popup":{"background":"#f0edff","text":"#000000","border":"#5e65c2"},"button":{"background":"#5e65c2","text":"#ffffff"}},"position":"bottom-right","content":{"message":"Questo sito usa i cookies per assicurarti la migliore esperienza possibile su internet.","button":"Accetta","link":"Informativa sui cookie","href":"https://www.thomas05.tk/"}})});</script>
+   <script src="https://cdn.websitepolicies.net/lib/cookieconsent/1.0.3/cookieconsent.min.js" defer></script>
+   <script>window.addEventListener("load", function () { window.wpcc.init({ "border": "thin", "corners": "small", "colors": { "popup": { "background": "#f0edff", "text": "#000000", "border": "#5e65c2" }, "button": { "background": "#5e65c2", "text": "#ffffff" } }, "position": "bottom-right", "content": { "message": "Questo sito usa i cookies per assicurarti la migliore esperienza possibile su internet.", "button": "Accetta", "link": "Informativa sui cookie", "href": "https://www.thomas05.tk/" } }) });</script>
 </body>
 
 </html>
