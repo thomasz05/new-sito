@@ -17,7 +17,7 @@
    <link rel="stylesheet" href="../css/bootstrap.min.css">
    <!-- style css -->
    <link rel="stylesheet" href="../css/style.css">
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+   
    <!-- Responsive-->
    <link rel="stylesheet" href="../css/responsive.css">
    <!-- fevicon -->
@@ -25,6 +25,7 @@
    <!-- Scrollbar Custom CSS -->
    <link rel="stylesheet" href="../css/jquery.mCustomScrollbar.min.css">
    <link rel="stylesheet" href="../css/social-circles.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
    <!-- Tweaks for older IEs-->
    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
@@ -50,11 +51,6 @@
 <!-- body -->
 
 <body class="main-layout">
-   <!-- loader  -->
-   <!--<div class="loader_bg">
-         <div class="loader"><img src="images/loading.gif" alt="#" /></div>
-      </div> -->
-   <!-- end loader -->
    <!-- header -->
    <header>
       <!-- header inner -->
@@ -161,26 +157,28 @@
                            <p>Questa tabella mostra tutti i giocatori attulamte online sul server della redcraft</p>
                         </div>
                      </div>
-                  
+
                   </div>
-                  <p class="redcraftlist titlepage">
-                  
-                     <i id="onlinePlayers"><b></b></i>
-                     <i id="status" class='fa fa-signal'  aria-hidden='true'></i>
+                  <div>
+                     <p class="redcraftlist titlepage">
+                        <i id="onlinePlayers"><b></b></i>
+                        <i id="status" class='fa fa-signal' aria-hidden='true'></i>
                      </p>
-                  <table class="center">
-                     <thead>
-                        <tr>
-                           <td> </td>
-                           <td>Nome</td>
-                           <td>Uuid</td>
-                        </tr>
-                     </thead>
-                     <tbody id="player">
-                        <tr>
-                        </tr>
-                     </tbody>
-                  </table>
+
+                     <table class="center">
+                        <thead>
+                           <tr>
+                              <td> </td>
+                              <td>Nome</td>
+                              <td>Uuid</td>
+                           </tr>
+                        </thead>
+                        <tbody id="player">
+                           <tr>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
                   <br>
                </div>
             </div>

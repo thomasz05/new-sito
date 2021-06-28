@@ -4,7 +4,7 @@ const playerList = $("#player");
 
 $(window).on("load", pingServer);
 
-function pingServer () {
+function pingServer() {
     $.getJSON(url, function (response) {
         setTimeout(pingServer, 1e3);
 
@@ -24,16 +24,14 @@ function pingServer () {
 
             return
         }
-        
-        
 
         // PLAYER COUNT
         players.text("Giocatori Online: " + response.players.online + " / " + response.players.max);
         document.getElementById("status").style.color = "green";
-        if (response.players.online==0) {
+
+        if (response.players.online == 0) {
             // EMPTY SERVER
             playerList.html('');
-            
             $('<tr>').append(
                 $('<td>').html(`<img src='https://minotar.net/helm/HeroBrine/20'>`),
                 $('<td>').text('NONE'),
@@ -41,10 +39,10 @@ function pingServer () {
             ).appendTo(playerList);
             return
         }
-        
+
         // CREATE TABLE
         playerList.html('');
-        response.players.sample.forEach((p,i) => {
+        response.players.sample.forEach((p, i) => {
             $('<tr>').append(
                 $('<td>').html(`<img src='https://crafatar.com/avatars/${p.id}?size=20&default=MHF_Steve'>`),
                 $('<td>').text(p.name),
